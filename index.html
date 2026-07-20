@@ -3,56 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les 3 Pillos | Enlaces Oficiales</title>
+    <title>Les 3 Pillos | GTA 6 Share Play</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="bg-animated"></div>
-    <div class="particles" id="particles"></div>
+    <div class="background-overlay"></div>
+    <div class="grid-overlay"></div>
     
     <div class="container">
-        <header class="profile-section">
-            <h2 class="top-blessing" style="color: #fff; font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; text-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c; margin-bottom: 25px; text-transform: uppercase;">¡DIOS TE AMA!</h2>
-            <div class="profile-pic">
-                <img src="https://ui-avatars.com/api/?name=L3P&background=ff003c&color=fff&size=150" alt="Les 3 Pillos Logo">
-            </div>
-            <h1 class="title">LES 3 PILLOS</h1>
-            <p class="subtitle">Bienvenidos a la Familia. GTA 6 en camino.</p>
-        </header>
+        <!-- Columna Izquierda: Logo y Textos -->
+        <div class="left-column">
+            <header class="hero">
+                <h2 class="slogan">¡DIOS TE AMA!</h2>
+                <div class="logo-container">
+                    <div class="logo-glow"></div>
+                    <img src="logo.png" alt="Les 3 Pillos Logo" class="profile-pic">
+                </div>
+                <h1 class="title">LES 3 PILLOS</h1>
+                <p class="subtitle">Bienvenidos a la página oficial. Únete a nuestra comunidad.</p>
+            </header>
+        </div>
 
-        <main class="links-section">
-            <a href="https://www.patreon.com/c/Les3Pillos" class="link-btn patreon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-patreon"></i>
-                <span>Hazte VIP en Patreon</span>
-                <div class="btn-glow"></div>
-            </a>
+        <!-- Columna Central: Póster de GTA 6 -->
+        <div class="center-column">
+            <img src="bg.jpg" alt="GTA 6 Les 3 Pillos Poster">
+        </div>
+
+        <!-- Columna Derecha: Botones -->
+        <div class="right-column">
+            <main class="links-grid">
+                <a href="https://www.patreon.com/c/Les3Pillos" class="card premium-card" target="_blank">
+                    <div class="card-icon"><i class="fab fa-patreon"></i></div>
+                    <div class="card-content">
+                        <h3>Pase VIP Express</h3>
+                        <p>Sáltate la fila y juega sin esperar</p>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-chevron-right"></i></div>
+                </a>
+                
+                <a href="https://discord.gg/P7J5WGpX9G" class="card discord-card" target="_blank">
+                    <div class="card-icon"><i class="fab fa-discord"></i></div>
+                    <div class="card-content">
+                        <h3>Únete al Servidor</h3>
+                        <p>Pide tu turno en la Fila Gratis</p>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-chevron-right"></i></div>
+                </a>
+
+                <div class="social-row">
+                    <a href="https://www.tiktok.com/@les3pillos" class="social-btn tiktok-btn" target="_blank">
+                        <i class="fab fa-tiktok"></i> @les3pillos
+                    </a>
+                    <a href="https://www.tiktok.com/@surisita8" class="social-btn tiktok-btn" target="_blank">
+                        <i class="fab fa-tiktok"></i> @surisita8
+                    </a>
+                </div>
+            </main>
             
-            <a href="https://discord.gg/P7J5WGpX9G" class="link-btn discord" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-discord"></i>
-                <span>Únete a nuestro Discord</span>
-                <div class="btn-glow"></div>
-            </a>
-            
-            <a href="https://www.tiktok.com/@les3pillos" class="link-btn tiktok" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-tiktok"></i>
-                <span>TikTok @les3pillos</span>
-                <div class="btn-glow"></div>
-            </a>
-            
-            <a href="https://www.tiktok.com/@surisita8" class="link-btn tiktok" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-tiktok"></i>
-                <span>TikTok @surisita8</span>
-                <div class="btn-glow"></div>
-            </a>
-        </main>
-        
-        <footer>
-            <p>Les 3 Pillos Family © 2026</p>
-        </footer>
+            <footer>
+                <p>Les 3 Pillos Family &copy; 2026. Todos los derechos reservados.</p>
+            </footer>
+        </div>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
