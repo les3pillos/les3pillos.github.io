@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg-animated {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, #1f2833 0%, #0b0c10 40%);
+    z-index: -2;
+    animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, #ff003c, #00b4d8, #7b2cbf);
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+    animation: pulse 3s infinite alternate;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0b0c10;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.links-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.link-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.link-btn i {
+    font-size: 1.5rem;
+    width: 35px;
+    z-index: 2;
+}
+
+.link-btn span {
+    flex-grow: 1;
+    text-align: center;
+    padding-right: 35px;
+    z-index: 2;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Hover Effects with Neon Colors */
+.patreon:hover { border-color: #f96854; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(249, 104, 84, 0.3); }
+.patreon .btn-glow { background: radial-gradient(circle, rgba(249, 104, 84, 0.4) 0%, rgba(249, 104, 84, 0) 70%); }
+
+.discord:hover { border-color: #5865F2; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3); }
+.discord .btn-glow { background: radial-gradient(circle, rgba(88, 101, 242, 0.4) 0%, rgba(88, 101, 242, 0) 70%); }
+
+.tiktok:hover { border-color: #ff0050; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 0, 80, 0.3); }
+.tiktok .btn-glow { background: radial-gradient(circle, rgba(255, 0, 80, 0.4) 0%, rgba(0, 242, 254, 0) 70%); }
+
+.link-btn:hover .btn-glow {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #666;
+    animation: fadeIn 1s ease-out 0.8s both;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(255, 0, 60, 0.3); }
+    100% { box-shadow: 0 0 30px rgba(255, 0, 60, 0.8), 0 0 50px rgba(123, 44, 191, 0.4); }
+}
