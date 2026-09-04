@@ -259,3 +259,21 @@ footer {
         margin: 20px 0;
     }
 }
+
+/* Security Refactor: Moved from index.html inline styles */
+.top-blessing {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Security Refactor: Moved from script.js dynamically injected styles */
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-100px) translateX(50px); }
+    100% { transform: translateY(-200px) translateX(-50px); opacity: 0; }
+}

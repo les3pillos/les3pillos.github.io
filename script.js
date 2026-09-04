@@ -29,14 +29,4 @@ document.addEventListener('DOMContentLoaded', () => {
         particlesContainer.appendChild(particle);
     }
     
-    // Add keyframes for particles dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float {
-            0% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-100px) translateX(50px); }
-            100% { transform: translateY(-200px) translateX(-50px); opacity: 0; }
-        }
-    `;
-    document.head.appendChild(style);
 });
